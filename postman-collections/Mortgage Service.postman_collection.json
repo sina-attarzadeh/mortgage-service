@@ -1,0 +1,64 @@
+{
+	"info": {
+		"_postman_id": "6a277b1a-7b89-4cd9-87a9-5c58665c8eb5",
+		"name": "Mortgage Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13447634"
+	},
+	"item": [
+		{
+			"name": "Interest Rates",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/interest-rates",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"interest-rates"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mortgage Check",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"maturityPeriod\": 30,\n    \"income\": 500,\n    \"loanValue\": 2000,\n    \"homeValue\": 2000\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/mortgage-check",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"mortgage-check"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
